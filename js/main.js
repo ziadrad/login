@@ -95,6 +95,11 @@ function login() {
  
 function logout(){
   localStorage.setItem("sessionuser", null)
-  history.back();
-
+  window.location.href = 'https://ziadrad.github.io/login';
+}
+function got0SignUp() {
+  window.location.href += '/signup.html';
+}
+function got0Login(){
+  window.location.href = 'https://ziadrad.github.io/login';
 }
