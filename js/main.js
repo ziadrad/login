@@ -81,8 +81,8 @@ function login() {
     if (emailogin.value==element.email&&Passwordlogin.value == element.password) {
       flag=0;
  localStorage.setItem("sessionuser",JSON.stringify( element.name));
-
-      window.open('/home_page.html', '_self').focus();
+ window.location.href += '/home_page.html';
+    
     }
   });
   if (flag) {
@@ -95,5 +95,6 @@ function login() {
  
 function logout(){
   localStorage.setItem("sessionuser", null)
-  window.open('/index.html', '_self').focus();
+  history.back();
+
 }
